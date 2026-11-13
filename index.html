@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мяу! С Днём Рождения!</title>
+
+<style>
+/* ОСНОВНОЕ ОФОРМЛЕНИЕ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    min-height: 100vh;
+    background-color: #ffe8f0;
+    background-image:
+        radial-gradient(#ffc3d8 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #714b61;
+    text-align: center;
+}
+
+/* ГЛАВНАЯ КАРТОЧКА */
+.container {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 30px 20px;
+    background: #fff9fc;
+    border: 4px solid #f5a8c5;
+    border-radius: 25px;
+    box-shadow: 8px 8px 0 #e9a0bc;
+}
+
+/* ВЕРХНЯЯ НАДПИСЬ */
+.top {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #d47b9e;
+}
+
+/* ЗАГОЛОВОК */
+h1 {
+    color: #d66d98;
+    font-size: clamp(28px, 7vw, 43px);
+    margin: 20px 0;
+    text-shadow: 2px 2px #ffd3e3;
+}
+
+/* КОТИКИ */
+.cats {
+    font-size: 65px;
+    margin: 15px 0;
+    letter-spacing: 8px;
+}
+
+/* ТЕКСТ */
+.message {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 490px;
+}
+
+/* ДЕКОРАТИВНЫЙ БЛОК */
+.decoration {
+    margin: 25px 0;
+    padding: 18px;
+    background: #ffe6f0;
+    border: 2px dashed #e9a0bc;
+    border-radius: 18px;
+    font-size: 17px;
+}
+
+/* КНОПКА */
+button {
+    border: none;
+    background: #e88fb2;
+    color: white;
+    padding: 15px 27px;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #c66f94;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #d978a0;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* СЕКРЕТНЫЙ ПОДАРОК */
+#gift {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff0f6;
+    border: 2px solid #f3b2cb;
+    border-radius: 18px;
+    animation: appear 0.5s ease;
+}
+
+#gift h2 {
+    color: #d66d98;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* НИЖНЯЯ НАДПИСЬ */
+.footer {
+    margin-top: 30px;
+    color: #c27b9b;
+    font-size: 13px;
+}
+
+.hearts {
+    font-size: 22px;
+    margin: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top">
+        ✦ A SPECIAL DAY FOR A SPECIAL PERSON ✦
+    </div>
+
+    <div class="cats">
+        🐱 🎀 🐈
+    </div>
+
+    <h1>С ДНЁМ РОЖДЕНИЯ!</h1>
+
+    <div class="hearts">
+        💗 💕 💗
+    </div>
+
+    <div class="message">
+        Сегодня твой день, Ваняууу! 🐱
+
+Желаю тебе побольше счастливых моментов,
+крутых приключений, верных друзей,
+невероятной удачи и исполнения желаний.
+
+Пусть всё задуманное получается,
+проблемы обходят стороной,
+а каждый новый день приносит
+что-нибудь хорошее!
+    </div>
+
+    <div class="decoration">
+        🐾 Официально объявляется день обнимашек,
+        вкусняшек и абсолютного счастья! 🐾
+    </div>
+
+    <div class="cats">
+        😽 🐾 😸
+    </div>
+
+    <button onclick="openGift()">
+        🎁 Открыть подарочек
+    </button>
+
+    <div id="gift">
+        <h2>МЯУ! СЮРПРИЗ! 💗</h2>
+
+        <div style="font-size: 55px;">
+            🐈‍⬛ 💝 🐈
+        </div>
+
+        <p class="message">
+            Ты прекрасный человек, и я желаю тебе
+            никогда не терять свою индивидуальность,
+            чаще радоваться мелочам и всегда
+            находить что-то хорошее даже в обычных днях!
+        </p>
+
+        <h2>ОБНИМАШКИ И КОТИКИ! 💕</h2>
+    </div>
+
+    <div class="footer">
+        MADE WITH LOVE & A LITTLE BIT OF CAT MAGIC
+        
+
+        © 2026
+    </div>
+
+</div>
+
+<script>
+// Открываем секретный подарочек
+function openGift() {
+    const gift = document.getElementById("gift");
+    gift.style.display = "block"
+;
+
+    // Меняем текст кнопки после нажатия
+    document.querySelector("button").textContent =
+        "💗 Подарочек открыт!";
+    
+    document.querySelector("button").disabled = true;
+}
+</script>
+
+</body>
+</html>
